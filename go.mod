@@ -1,4 +1,4 @@
-module qftool
+module github.com/tinkerator/qftool
 
 go 1.16
 

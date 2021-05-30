@@ -11,7 +11,7 @@ written in Go. It has only been tested under Linux.
 
 Build from source:
 ```
-$ go build qftool.go
+$ go build github.com/tinkerator/qftool
 ```
 
 When invoked, the `--tty` argument of `qftool` defaults to the
