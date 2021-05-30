@@ -106,6 +106,8 @@ The basic boot process is:
 - execute `bootloader`
 - confirm CRC for `bootfpga` and intall/execute it
 - wait 5 seconds for user to press the `USER` button and enter programming mode
+  - the board remains in this state until the user presses `RESET`
+    again (start over)
 - confirm presence and CRC of `appfpga` and if present install/execute it
 - confirm presence and CRC of `app` and if present chain-load to it
 
@@ -142,8 +144,9 @@ come to display:
 
 ### Reading a binary section from the SPI Flash ROM
 
-To read a section of the SPI Flash ROM and display it in (`xxd -g1`
-format) you can do the following:
+To read a section of the SPI Flash ROM and display it in ([`xxd
+-g1`](https://pkg.go.dev/zappem.net/pub/debug/xxd) format) you can do
+the following:
 ```
 $ ./qftool --read=- --section=bootloader
 read [0x000000,0x00ffff] ................................................. done
