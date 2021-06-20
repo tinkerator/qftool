@@ -104,7 +104,7 @@ correct in order for `qftool` to work!
 
 The basic boot process is:
 - execute `bootloader`
-- confirm CRC for `bootfpga` and intall/execute it
+- confirm CRC for `bootfpga` and install/execute it
 - wait 5 seconds for user to press the `USER` button and enter programming mode
   - the board remains in this state until the user presses `RESET`
     again (start over)
